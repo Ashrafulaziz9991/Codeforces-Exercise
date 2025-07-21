@@ -14,33 +14,33 @@ int main()
         }
     }
 
-    pair<int, int>coor;
+    // pair<int, int>coor;
 
-//    for (i = 0; i < 5; i++)
-//    {
-//        for (j = 0; j < 5; j++)
-//        {
-//            if (mat[i][j] == 1)
-//            {
-//                x = i;
-//                y = j;
-//            }
-//        }
-//    }
+   for (i = 0; i < 5; i++)
+   {
+       for (j = 0; j < 5; j++)
+       {
+           if (mat[i][j] == 1)
+           {
+               x = i;
+               y = j;
+           }
+       }
+   }
 
-    for (i = 0; i < 5; i++)
-    {
-        for (j = 0; j < 5; j++)
-        {
-            if (mat[i][j] == 1)
-            {
-                coor(&i, &j);
-            }
-        }
-    }
+    // for (i = 0; i < 5; i++)
+    // {
+    //     for (j = 0; j < 5; j++)
+    //     {
+    //         if (mat[i][j] == 1)
+    //         {
+    //             coor(&i, &j);
+    //         }
+    //     }
+    // }
 
-    x = coor.first;
-    y = coor.second;
+    // x = coor.first;
+    // y = coor.second;
 
     int x_pos, y_pos;
 
