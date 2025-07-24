@@ -1,21 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-/*
-int factorial(int num)
-{
-    if (num == 0 || num == 1)
-        return 1;
-    else
-        return num * factorial(num - 1);
-}
-
-
-int combination(int num)
-{
-    int comb = factorial(num) / factorial(2) * factorial(num - 2);
-    return comb;
-}
-*/
+ /* 
+     * count samll_nums
+     * count big_nums
+     * result =  count samll_nums * count big_nums
+ */
 int main()
 {
     ios_base::sync_with_stdio(0);
@@ -40,11 +29,5 @@ int main()
 
 
     cout << diff <<" "<< mx_count*mn_count; 
-    /* 
-     * count samll_nums
-     * count big_nums
-     * result =  count samll_nums * count big_nums
-     */
-
     return 0;
 }
