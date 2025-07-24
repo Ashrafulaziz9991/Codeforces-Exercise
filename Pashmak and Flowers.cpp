@@ -23,8 +23,8 @@ int main()
     int mx = *max_element(flowers_beauty.begin(), flowers_beauty.end());
     int mn = *min_element(flowers_beauty.begin(), flowers_beauty.end());
     int mx_count = count(flowers_beauty.begin(), flowers_beauty.end(), mx);
-    int mn_count = count(flowers_beauty.begin(), flowers_beauty.end(), mx);
-
+    int mn_count = count(flowers_beauty.begin(), flowers_beauty.end(), mn);
+ 
     int diff = mx - mn;
 
 
