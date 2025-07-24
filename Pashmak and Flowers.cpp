@@ -18,7 +18,7 @@ int main()
     {
         cin >> flowers_beauty[i];
     }
-    sort(flowers_beauty.begin(), flowers_beauty.end());
+    // sort(flowers_beauty.begin(), flowers_beauty.end());
 
     int mx = *max_element(flowers_beauty.begin(), flowers_beauty.end());
     int mn = *min_element(flowers_beauty.begin(), flowers_beauty.end());
@@ -26,8 +26,9 @@ int main()
     int mn_count = count(flowers_beauty.begin(), flowers_beauty.end(), mn);
  
     int diff = mx - mn;
-
-
-    cout << diff <<" "<< mx_count*mn_count; 
+    if(mn == mx)
+        cout<< (n * (n - 1)) / 2;
+    else
+        cout << diff <<" "<< mx_count*mn_count; 
     return 0;
 }
