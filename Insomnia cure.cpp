@@ -23,8 +23,6 @@ int main()
             count++;
         else if (i % n == 0)
             count++;
-        else if (i % d == 0)
-            count++;
     }
     cout << count;
     return 0;
