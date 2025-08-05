@@ -13,23 +13,30 @@ int main()
 
     int lv2 = 0;
     int count2 = 0;
-
-    for (int i = 0; i < num.size(); i++)
+    for (auto &&i : num)
     {
-        if (num[i] == 1 && num[i] == num[i+1])
-        {
-            count++;
-            lv = max(lv, count);
-        }
-        else if (num[i] == 0 && num[i] == num[i+1])
-        {
+        if (i == '1')
             count2++;
-            lv2 = max(lv2, count2);
-        }
+        else
+            count2 = 0;
+        count = max(count2, count);
     }
 
-    cout<<lv<<endl;
-    cout<<lv2<<endl;
+    for (auto &&i : num)
+    {
+        if (i == '0')
+            lv2++;
+        else
+            lv2 = 0;
+        lv = max(lv2, lv);
+    }
 
+    // cout << count <<endl;
+    // cout << lv;
+
+    if(count >=7 || lv >=7)
+        cout<<"YES"<<endl;
+    else
+        cout<<"NO"<<endl;
     return 0;
 }
