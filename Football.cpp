@@ -20,16 +20,22 @@ int main()
         else
             count2 = 0;
         count = max(count2, count);
-    }
 
-    for (auto &&i : num)
-    {
         if (i == '0')
             lv2++;
         else
             lv2 = 0;
         lv = max(lv2, lv);
     }
+
+    // for (auto &&i : num)
+    // {
+    //     if (i == '0')
+    //         lv2++;
+    //     else
+    //         lv2 = 0;
+    //     lv = max(lv2, lv);
+    // }
 
     // cout << count <<endl;
     // cout << lv;
