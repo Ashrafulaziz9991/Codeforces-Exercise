@@ -28,18 +28,6 @@ int main()
         lv = max(lv2, lv);
     }
 
-    // for (auto &&i : num)
-    // {
-    //     if (i == '0')
-    //         lv2++;
-    //     else
-    //         lv2 = 0;
-    //     lv = max(lv2, lv);
-    // }
-
-    // cout << count <<endl;
-    // cout << lv;
-
     if(count >=7 || lv >=7)
         cout<<"YES"<<endl;
     else
