@@ -58,16 +58,16 @@ public:
         this->number = num;
     }
 
-    void digit_extract(int num){
-        int temp, count = 0;
-        while (num > 0)
-        {
-            temp = num % 10;
-            cout<< temp<<" ";
-            count++;
-            num/=10;
-        }   
-    }
+    // void digit_extract(int num){
+    //     int temp, count = 0;
+    //     while (num > 0)
+    //     {
+    //         temp = num % 10;
+    //         cout<< temp<<" ";
+    //         count++;
+    //         num/=10;
+    //     }   
+    // }
 
     void digit_extracttwo(int num){
         int temp, count = 0;
@@ -81,17 +81,33 @@ public:
     }
 };
 
+void digit_extract(int num)
+{
+    int temp, count = 0;
+    while (num > 0)
+    {
+        temp = num % 10;
+        cout << temp << " ";
+        count++;
+        num /= 10;
+    }
+}
+
 int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    int n = 10324;
-
-    cout<<n%10<<endl;
+    int n = 14;
+    // int x = pow(10, n);                    
+    if(n%10 != 0)
+        
+    return 0;
+}
+/*
+cout<<n%10<<endl;
     cout<<n%100<<endl;
     cout<<n%1000<<endl;
     cout<<n%100000<<endl;
-    
-    return 0;
-}
+
+*/
