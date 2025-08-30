@@ -1,7 +1,5 @@
 /*
-
 Team Olympiad problem link https://codeforces.com/problemset/problem/490/A
-
 */
 
 #include <bits/stdc++.h>
@@ -19,13 +17,6 @@ int main()
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
-
-    // sort(a.begin(), a.end());
-
-    // for (int i = 0; i < n; i++) {
-    //     cout << a[i] << " ";
-    // }
-    // cout << endl;
 
     for (int i = 0; i < n; i++) {
         if (a[i] == 1) {
