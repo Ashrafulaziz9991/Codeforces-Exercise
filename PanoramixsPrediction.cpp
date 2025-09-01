@@ -12,7 +12,6 @@ int main()
     int n, m;
     cin >> n >> m;
    
-
     for (int i = 0; i < numbers.size(); i++)
     {
         if (n == numbers[i] && m == numbers[i+1])
