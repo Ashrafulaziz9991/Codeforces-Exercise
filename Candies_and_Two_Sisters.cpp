@@ -1,3 +1,4 @@
+// problem link : https://codeforces.com/problemset/problem/1335/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -12,7 +13,6 @@ int main()
     {
         long long int candie, a, counter = 0;
         cin >> candie;
-        //O(1)
         cout<<candie - (candie /2 + 1)<<"\n";
     }
     return 0;
