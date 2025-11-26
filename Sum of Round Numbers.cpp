@@ -1,113 +1,54 @@
-/*
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-
-    int num, count = 0;
-    cin >> num;
-    while (1)
-    {
-        if (num % 10 != 0)
-        {
-            num -= (num % 10);
-            cout << num << " " << num % 10;
-            count++;
-        }
-        else
-            break;
-    }
-
-    cout << endl;
-
-    cout << count;
-
-    return 0;
-}
-*/
-// use "ctrl k + ctrl f" to format selection
-
-
-/*
-
-count num lenght
-assaume len = 5
-num = x%1e5
-numrem = x - num
-
-n = 123654
-
-100000
-
-100000
-
-
-*/
-
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-class Number{
-public:
-
-    int number;
-
-    Number(int num){
-        this->number = num;
-    }
-
-    // void digit_extract(int num){
-    //     int temp, count = 0;
-    //     while (num > 0)
-    //     {
-    //         temp = num % 10;
-    //         cout<< temp<<" ";
-    //         count++;
-    //         num/=10;
-    //     }   
-    // }
-
-    void digit_extracttwo(int num){
-        int temp, count = 0;
-        while (num > 0)
-        {
-            // temp = num % 1e2;
-            cout<< temp<<" ";
-            count++;
-            num/=1e2;
-        }
-    }
-};
-
-void digit_extract(int num)
-{
+int digit_extracts(int num){
     int temp, count = 0;
     while (num > 0)
     {
         temp = num % 10;
-        cout << temp << " ";
         count++;
-        num /= 10;
+        num/=10;
     }
+    return count;
+}
+
+vector<int> round_nums(int nums){
+    if(nums == 0) return {};
+    int temp = 0;
+    vector<int>ls;
+    if(digit_extracts(nums) == 5)
+        temp = nums % 10000;
+    else if(digit_extracts(nums) == 4)
+        temp = nums % 1000;
+    else if(digit_extracts(nums) == 3)
+        temp = nums % 100;
+    else if(digit_extracts(nums) == 2)
+        temp = nums % 10;
+    
+    int rem = nums - temp;
+    ls.push_back(rem);
+    vector<int> sub_sec = round_nums(temp);
+    ls.insert(ls.end(), sub_sec.begin(), sub_sec.end());
+    return ls;
 }
 
 int main()
 {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-
-    int n = 14;
-    // int x = pow(10, n);                    
-    if(n%10 != 0)
-        
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<int> curr = round_nums(n);
+        int counter = curr.size();
+        cout << counter << endl;
+        for (int i : curr)
+            cout << i << " ";
+        cout << endl;
+    }
     return 0;
 }
-/*
-cout<<n%10<<endl;
-    cout<<n%100<<endl;
-    cout<<n%1000<<endl;
-    cout<<n%100000<<endl;
-
-*/
