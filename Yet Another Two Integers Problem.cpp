@@ -135,6 +135,7 @@ int main()
 /**
  * optimised Version now 
  * problem link : https://codeforces.com/problemset/problem/1409/A
+ * Greedy teqnique to reduce variable into terget variable
  */
 
 #include <iostream>
