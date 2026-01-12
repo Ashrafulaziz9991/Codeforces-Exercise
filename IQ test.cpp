@@ -1,53 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-
-    int n, oddcount = 0, evencount = 0;
-    cin >> n;
-    vector<int> v, v2, v3;
-    for (int i = 1; i <= n; i++)
-    {
-        int x;
-        cin >> x;
-        v.push_back(x);
-        if (x % 2 != 0)
-        {
-            oddcount = count(v.begin(), v.end(), v[i]);
-            // v3.push_back(i);
-        }
-        else
-        {
-            evencount = count(v.begin(), v.end(), v[i]);
-            // v2.push_back(i);
-        }
-    }
-
-    if (oddcount < evencount)
-        cout << oddcount << endl;
-    else
-        cout << evencount << endl;
-
-    // cout<<oddcount<<endl;
-    // cout<<evencount<<endl;
-
-    // for (auto &&i : v2)
-    // {
-    //     //cout<< i <<" ";
-    // }
-    // cout<<endl;
-
-    // for (auto &&i : v3)
-    // {
-    //     cout<< i <<" ";
-    // }
-
-    //cout << u;
-
-    return 0;
-}
 
 /**
  * camel case
@@ -70,3 +20,56 @@ std::string toCamelCase(const std::string& sentence) {
 
 
  */
+
+// problem link : https://codeforces.com/problemset/problem/25/A
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <cmath>
+#include <climits>
+#include <cstring>
+#include <queue>
+#include <stack>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+
+using namespace std;
+
+bool even(int num)
+{
+    return num % 2 == 0;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n, odd_cnt = 0, eve_cnt = 0, index;
+    vector<int>nums = {1, 2, 1, 1};
+    for(int i : nums){
+        if(i % 2 == 0) eve_cnt++;
+        else odd_cnt++;
+    }
+
+    if(eve_cnt < odd_cnt){
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if(nums[i] % 2 == 0) index = i;
+        }
+    }
+    else{
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if(nums[i] % 2 != 0) index = i;
+        }
+    }
+    cout << eve_cnt << endl;
+    cout << odd_cnt << endl;
+    cout << index << endl;
+    return 0;
+}
