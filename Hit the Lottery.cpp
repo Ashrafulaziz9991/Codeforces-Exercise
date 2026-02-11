@@ -70,4 +70,20 @@ int main()
  * compare the hole amount with according to its max amount of array
  * & erase rest of note compare the rest money amount
  * count the whole process & return the count number as a result
+ * 
  **/
+
+
+/*
+
+// more optimized
+int counting(int amount) {
+    if (amount == 0) return 0;
+    if (amount >= 100) return (amount / 100) + counting(amount % 100);
+    if (amount >= 20) return 1 + counting(amount - 20);
+    if (amount >= 10) return 1 + counting(amount - 10);
+    if (amount >= 5) return 1 + counting(amount - 5);
+    return amount;  // Count remaining 1s
+}
+
+*/
